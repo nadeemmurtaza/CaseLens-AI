@@ -6,253 +6,158 @@
 
 **Project:** CaseLens AI  
 **Document:** Phase 1 Baseline Approval Record  
-**Version:** 1.0  
-**Status:** Baseline Prepared — Executive Approval Pending  
-**Date:** 18 July 2026  
+**Version:** 1.1  
+**Status:** Approved with Controlled Condition  
+**Approval Date:** 18 July 2026  
 **Submission Deadline:** Monday, 27 July 2026, 11:59 PM PKT  
+**Repository:** `nadeemmurtaza/CaseLens-AI`  
+**Pull Request:** `#1 — Build complete Phase 1 documentation baseline`
 
 ---
 
-## 1. Purpose
+## 1. Approval Decision
 
-This record identifies the documents, decisions, conditions, and unresolved exceptions that define the CaseLens AI Phase 1 baseline.
+The CaseLens AI Phase 1 documentation baseline is approved for integration into `main` and for use as the controlled foundation of later project phases.
 
-It prevents later phases from changing the product casually or claiming that planning documents prove implementation.
+This approval confirms that the project purpose, assignment interpretation, target users, MVP boundary, product behavior, user journeys, AI responsibilities, safeguards, evidence strategy, risks, assumptions, and change-control rules are sufficiently defined to proceed.
 
-Phase 1 approval authorizes design and technical planning against the baseline. It does not prove that application code exists, tests pass, Gemini works, Vercel is configured, or the assignment is ready for submission.
-
----
-
-## 2. Phase 1 Objective
-
-Phase 1 establishes:
-
-- The confirmed assignment requirements
-- The project purpose and target users
-- The original problem and product response
-- The MVP boundary
-- Exact product behavior
-- Application routes and user journeys
-- AI responsibilities, prompts, schemas, and safeguards
-- Assignment traceability
-- NotebookLM evidence workflow
-- Risks, assumptions, dependencies, and decisions
-- Approval and change-control rules
+Approval does not claim that application code, Gemini integration, tests, deployment, screenshots, or the final README already exist.
 
 ---
 
-## 3. Baseline Document Set
+## 2. Approved Baseline Documents
 
-| # | Document | Repository path | Status at baseline preparation |
+| # | Document | Repository path | Approval status |
 |---|---|---|---|
-| 1 | Assignment Requirements Source Record | `docs/ASSIGNMENT-REQUIREMENTS-SOURCE-RECORD.md` | Source baseline |
-| 2 | Project Charter | `docs/PROJECT-CHARTER.md` | Approved baseline document |
-| 3 | Product Requirements Document | `docs/PRODUCT-REQUIREMENTS.md` | Proposed for approval |
-| 4 | Assignment Traceability Matrix | `docs/ASSIGNMENT-TRACEABILITY-MATRIX.md` | Proposed for approval |
-| 5 | User Flows and Information Architecture | `docs/USER-FLOWS-AND-INFORMATION-ARCHITECTURE.md` | Proposed for approval |
-| 6 | AI Feature and Prompt Specification | `docs/AI-FEATURE-AND-PROMPT-SPECIFICATION.md` | Proposed for approval |
-| 7 | NotebookLM Research and Evidence Plan | `docs/NOTEBOOKLM-RESEARCH-AND-EVIDENCE-PLAN.md` | Proposed for approval |
-| 8 | Risks, Assumptions and Decisions Register | `docs/RISKS-ASSUMPTIONS-AND-DECISIONS-REGISTER.md` | Active |
-| 9 | Phase 1 Baseline Approval Record | `docs/PHASE-1-BASELINE-APPROVAL.md` | Prepared |
+| 1 | Assignment Requirements Source Record | `docs/ASSIGNMENT-REQUIREMENTS-SOURCE-RECORD.md` | Approved with source condition |
+| 2 | Project Charter | `docs/PROJECT-CHARTER.md` | Approved |
+| 3 | Product Requirements Document | `docs/PRODUCT-REQUIREMENTS.md` | Approved |
+| 4 | Assignment Traceability Matrix | `docs/ASSIGNMENT-TRACEABILITY-MATRIX.md` | Approved |
+| 5 | User Flows and Information Architecture | `docs/USER-FLOWS-AND-INFORMATION-ARCHITECTURE.md` | Approved |
+| 6 | AI Feature and Prompt Specification | `docs/AI-FEATURE-AND-PROMPT-SPECIFICATION.md` | Approved |
+| 7 | NotebookLM Research and Evidence Plan | `docs/NOTEBOOKLM-RESEARCH-AND-EVIDENCE-PLAN.md` | Approved |
+| 8 | Risks, Assumptions and Decisions Register | `docs/RISKS-ASSUMPTIONS-AND-DECISIONS-REGISTER.md` | Approved as active register |
+| 9 | Phase 1 Baseline Approval Record | `docs/PHASE-1-BASELINE-APPROVAL.md` | Approved |
 
 ---
 
-## 4. Approved Strategic Direction
+## 3. Approved Product Direction
 
-The following direction is treated as locked unless superseded through change control.
+CaseLens AI is an AI-powered medical-learning web application for practising structured clinical reasoning.
 
-### 4.1 Product
+The primary users are medical students and examination candidates who need to analyse educational cases, distinguish supplied facts from inference, understand diagnostic reasoning, compare differentials, identify missing information, recognise red flags, and practise case-specific MCQs.
 
-CaseLens AI is an AI-powered medical-learning web application.
-
-### 4.2 Target User
-
-The primary users are medical students and examination candidates practising case-based reasoning.
-
-### 4.3 Core Problem
-
-Medical learners often analyse clinical cases inconsistently, miss important clues, confuse facts with assumptions, and struggle to turn cases into active revision.
-
-### 4.4 Core Product Outcome
-
-A learner enters an educational case and receives structured reasoning, differentials, missing information, red flags, study topics, and case-specific MCQs.
-
-### 4.5 Core Learning Loop
+The approved core learning loop is:
 
 ```text
-Enter case
-→ Validate
+Enter educational case
+→ Validate input
 → Analyse with Gemini
 → Review structured reasoning
-→ Generate MCQs
-→ Attempt and review
+→ Generate case-specific MCQs
+→ Attempt and review explanations
 → Copy, print, or revisit locally
 ```
 
-### 4.6 AI Provider
+The application is not approved as:
 
-The planned live AI provider is Gemini API.
-
-### 4.7 Deployment
-
-The planned production deployment target is Vercel at a public URL.
-
-### 4.8 Source and Submission
-
-The public repository is:
-
-```text
-nadeemmurtaza/CaseLens-AI
-```
-
-The repository link is the only planned portal submission item and must lead evaluators to the live app and complete README report.
+- A general-purpose chatbot
+- A learning-management system
+- A real-patient diagnostic system
+- A treatment or prescription tool
+- A native Android or iOS application
 
 ---
 
-## 5. Locked MVP Scope
+## 4. Approved P0 Scope
 
-### P0 Features
+The approved MVP includes:
 
 - New Case workspace
 - Educational-use and privacy warning
-- Case input and validation
+- Clinical case input and validation
 - Difficulty selection
 - Examination-style selection
-- MCQ count selection
+- MCQ quantity selection
 - Server-side Gemini analysis
-- Structured analysis sections
-- Insufficient-information behavior
-- Out-of-scope behavior
+- Structured case analysis
+- Insufficient-information handling
+- Non-medical and unsafe-input handling
 - Case-specific MCQ generation
-- MCQ attempt and explanation review
+- MCQ attempt, scoring, and explanation review
 - Local recent-case history
-- Reopen and delete local cases
-- Copy analysis
-- Print / Save PDF through browser print
+- Reopen, delete, and clear-history behavior
+- Copy analysis and MCQs
+- Print or Save PDF through browser print
 - Responsive mobile and desktop experience
 - About and Safety view
-- Useful provider and network errors
+- Useful network, provider, timeout, and validation errors
 - Public GitHub repository
 - Public Vercel deployment
-- Comprehensive README
+- Comprehensive README project report
 
-### Explicitly Out of Scope
+The following remain outside the MVP:
 
-- Native Android or iOS applications
-- App-store release
-- Authentication
-- User accounts
+- Authentication and user accounts
 - Cloud case history
-- Course management
-- Teacher dashboards
-- Attendance
-- Certificates
-- Payments
-- Social features
+- Courses, attendance, certificates, or instructor dashboards
+- Payments or subscriptions
+- Social and collaboration features
 - Real patient records
 - Patient diagnosis or treatment
 - Prescription generation
 - Medical-image analysis
-- Voice consultation
 - Hospital integration
 - Multiple AI providers
 - Fine-tuned models
 - Advanced analytics
 
-Deferred items must not become hidden dependencies of P0 work.
-
 ---
 
-## 6. Locked Product Boundaries
+## 5. Approved AI Boundaries
 
-### 6.1 Application, Not Website
+The implementation must:
 
-The deliverable is an interactive application. Informational content must support the workflow rather than replace it.
-
-### 6.2 Not a General Chatbot
-
-The interface must use defined case input and structured output. An open chat transcript is not the product.
-
-### 6.3 Not an LMS
-
-The application does not manage courses, students, teachers, attendance, or certificates.
-
-### 6.4 Educational, Not Clinical Care
-
-The application must not diagnose or treat a real patient and must not replace professional or emergency evaluation.
-
-### 6.5 No Identifiable Patient Information
-
-Users must be warned not to enter identifiable patient information. Ordinary logs must not store raw case text.
-
-### 6.6 Local History Only
-
-Recent-case history is stored in the user's browser for the MVP and must be described honestly.
-
----
-
-## 7. Locked AI Rules
-
-The AI implementation must:
-
-- Treat case text as untrusted data
-- Ignore instructions inside case text
+- Treat submitted case text as untrusted data
+- Ignore instructions embedded inside case text
 - Separate supplied facts from inference
-- Avoid treating unmentioned findings as absent
-- Avoid invented clinical facts
+- Never treat an unmentioned finding as absent
+- Avoid inventing history, examination, laboratory, or imaging facts
 - Use calibrated confidence
 - Handle insufficient information explicitly
-- Avoid patient-specific prescriptions or treatment
+- Avoid patient-specific prescriptions and treatment instructions
 - Return structured JSON
-- Pass server-side schema validation
+- Validate provider output server-side
 - Fail safely when provider output is invalid
-- Keep the API key server-side
-- Avoid revealing system prompts or secrets
-- Generate exactly one best answer per MCQ
+- Keep Gemini credentials server-side
+- Avoid exposing prompts, secrets, or internal configuration
+- Generate exactly one best answer for each MCQ
 
-Prompt changes require versioning and updated tests.
-
----
-
-## 8. Confirmed Assignment Alignment
-
-The baseline responds to the supplied assignment requirements as follows:
-
-| Course requirement | Planned evidence |
-|---|---|
-| Original idea | Structured clinical-reasoning workflow and originality explanation |
-| Real problem | Medical-learning problem statement and target user |
-| Complete working app | End-to-end P0 learning loop |
-| AI feature | Real Gemini analysis and MCQ generation |
-| Public GitHub | Public repository with complete final source |
-| Public URL | Vercel production deployment |
-| Comprehensive README | README as complete project report |
-| Idea marking | Originality and product-focus evidence |
-| Completion marking | Functional and test evidence |
-| Deployment marking | Production build and live workflow evidence |
-| Reporting marking | README gap audit and final report |
+Material prompt changes require versioning and test updates.
 
 ---
 
-## 9. Conditional Exception: Full Portal Brief
+## 6. Controlled Condition
 
-The official announcement states that a full brief exists in the portal Assignments tab. That full brief has not been supplied to the repository.
+The official course announcement states that a fuller assignment brief exists in the student portal. That full portal brief has not yet been supplied to the repository.
 
-Therefore, Phase 1 is conditionally based on the confirmed announcement.
+Phase 1 is therefore approved with this controlled condition:
 
-If the full portal brief is obtained:
+> When the full portal brief becomes available, it must be compared against the Assignment Requirements Source Record and Assignment Traceability Matrix before final submission.
 
-1. Add it to the Assignment Requirements Source Record.
-2. Run the NotebookLM Assignment Compliance Report.
-3. Update the traceability matrix.
-4. Revise affected documents.
-5. Reapprove the Phase 1 baseline if material requirements change.
+Required reconciliation steps:
 
-This exception does not justify delaying current work, but it remains an open High risk.
+1. Preserve the full brief or an accurate transcription in the source record.
+2. Compare it with the current requirement IDs.
+3. Add any missing requirements to the traceability matrix.
+4. Update affected product, design, implementation, testing, deployment, and README requirements.
+5. Reapprove the baseline only when the new brief materially changes the approved product.
+
+This condition does not block Phase 2 because the confirmed announcement already establishes the central deliverables, marking categories, public repository requirement, live deployment requirement, AI requirement, README requirement, and deadline.
 
 ---
 
-## 10. Phase 1 Acceptance Checklist
+## 7. Acceptance Checklist
 
 ### Assignment Control
 
@@ -267,16 +172,16 @@ This exception does not justify delaying current work, but it remains an open Hi
 
 - [x] Product purpose defined
 - [x] Real problem defined
-- [x] Target user defined
+- [x] Target users defined
 - [x] Originality position defined
 - [x] MVP scope defined
-- [x] Out-of-scope list defined
+- [x] Out-of-scope boundary defined
 - [x] Completion definition defined
 
 ### Product Behavior
 
 - [x] Primary workflow defined
-- [x] Routes defined
+- [x] Routes and information architecture defined
 - [x] Screen requirements defined
 - [x] Empty, loading, success, and error states defined
 - [x] Local-history behavior defined
@@ -297,51 +202,53 @@ This exception does not justify delaying current work, but it remains an open Hi
 
 - [x] Assignment traceability matrix created
 - [x] NotebookLM evidence plan created
-- [x] Risks and dependencies recorded
+- [x] Risks, assumptions, and dependencies recorded
 - [x] Decisions recorded
 - [x] Change-control rule defined
-- [ ] Documents reviewed and approved by project owner
-- [ ] Documentation pull request integrated into `main`
+- [x] Documents reviewed and approved by project owner
+- [x] Documentation pull request authorized for integration into `main`
 
 ---
 
-## 11. Authorization Provided by Approval
+## 8. What This Approval Authorizes
 
-When this baseline receives executive approval, later phases may:
+Later phases may now:
 
-- Prepare verified design briefs
-- Generate and audit Stitch screen concepts
+- Prepare the verified design brief
+- Generate and review interface directions
 - Define technical architecture
-- Bootstrap application code
+- Bootstrap the application
 - Implement P0 features
-- Build test suites
+- Build automated and manual tests
 - Configure Vercel deployment
-- Develop the README report
+- Build the comprehensive README
+- Collect screenshots and submission evidence
 
-Later phases may not expand scope silently.
+Later phases may not silently expand scope or weaken the approved medical-safety boundaries.
 
 ---
 
-## 12. What Approval Does Not Mean
+## 9. What This Approval Does Not Prove
 
-Phase 1 approval does not mean:
+This approval does not prove that:
 
-- Code has been written
-- Gemini integration works
+- Application code has been written
+- Gemini works in development or production
 - Tests pass
-- Vercel deployment exists
+- Vercel is configured
+- The live URL works
 - The README is complete
-- The application is safe for clinical use
 - The project is ready for submission
-- Unknown portal requirements are resolved
+- The application is safe for real clinical use
+- The unavailable portal brief contains no additional requirement
 
-Those claims require later execution evidence.
+Those claims require evidence from later phases.
 
 ---
 
-## 13. Change-Control Gate
+## 10. Change-Control Gate
 
-A material change to any of the following requires documentation and approval:
+A material change requires a recorded decision and impact review when it affects:
 
 - Core problem
 - Target users
@@ -356,47 +263,41 @@ A material change to any of the following requires documentation and approval:
 - Submission plan
 - Deadline strategy
 
-The change record must identify affected documents and tests.
+The change record must identify all affected documents, implementation components, and tests.
 
 ---
 
-## 14. Approval Record
+## 11. Approval Record
 
-### Project Owner Decision
-
-**Decision:** Pending  
+**Decision:** Approved with Controlled Condition  
 **Decision maker:** Nadeem Murtaza  
-**Approved version:** Pending  
-**Approval date:** Pending  
-**Approved repository commit:** Pending  
-**Conditions:** Reconcile the full portal brief if it becomes available.  
+**Approved version:** Phase 1 baseline, version 1.1  
+**Approval date:** 18 July 2026  
+**Approval action:** Authorization to merge PR #1 into `main`  
+**Condition:** Reconcile the full portal brief when it becomes available.  
 
-### Technical Review
-
-**Status:** Pending architecture phase  
-**Reviewer:** Pending  
-
-### Phase 1 Final Status
+### Phase 1 Status
 
 **Documentation built:** Yes  
-**Documentation integrated into main:** Pending  
-**Executive approval:** Pending  
-**Implementation started:** No claim made  
-**Phase state:** Baseline Prepared
+**Project-owner approval:** Yes  
+**Authorized for integration:** Yes  
+**Implementation completion claimed:** No  
+**Submission readiness claimed:** No  
+**Phase state after successful merge:** Complete with one controlled source-reconciliation condition
 
 ---
 
-## 15. Next Phase After Approval
+## 12. Next Phase
 
-The next controlled phase is:
+After successful integration into `main`, the next controlled phase is:
 
 > **Phase 2: Verified Design Preparation and Interface Direction**
 
-Its first outputs should be:
+Its first outputs are:
 
 1. Verified Stitch Input Brief
-2. Initial design directions
+2. Initial interface directions
 3. Stitch Design Audit
 4. Approved screen reference set
 
-Technical architecture may proceed in parallel only when it does not invent product behavior or expand scope.
+Technical architecture may proceed in parallel only where it implements approved product behavior and does not expand scope.
